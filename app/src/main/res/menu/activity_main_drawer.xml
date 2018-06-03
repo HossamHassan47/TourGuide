@@ -7,23 +7,23 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_home"
-            android:title="Home" />
+            android:title="@string/nav_item_home" />
         <item
             android:id="@+id/nav_attractions"
-            android:icon="@drawable/ic_menu_attractions"
-            android:title="Top Attractions" />
+            android:icon="@drawable/ic_menu_attraction"
+            android:title="@string/nav_item_attractions" />
         <item
             android:id="@+id/nav_mosques"
-            android:icon="@drawable/ic_menu_mosques"
-            android:title="Most Beautiful Mosques" />
+            android:icon="@drawable/ic_menu_mosque"
+            android:title="@string/nav_item_mosques" />
         <item
             android:id="@+id/nav_parks"
-            android:icon="@drawable/ic_menu_parks"
-            android:title="Nature and Parks" />
+            android:icon="@drawable/ic_menu_park"
+            android:title="@string/nav_item_parks" />
         <item
             android:id="@+id/nav_streets"
-            android:icon="@drawable/ic_menu_streets"
-            android:title="Coolest Streets" />
+            android:icon="@drawable/ic_menu_street"
+            android:title="@string/nav_item_streets" />
     </group>
 
 </menu>

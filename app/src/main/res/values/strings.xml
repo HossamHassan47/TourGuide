@@ -2,10 +2,16 @@
     <string name="app_name">Tour Guide</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Cairo, Egypt</string>
-    <string name="nav_header_subtitle">The City of the Thousand Minaret</string>
+    <string name="nav_header_title">Cairo</string>
+    <string name="nav_header_subtitle">The city of a 1000 minarets</string>
     <string name="nav_header_desc">Cairo</string>
     <string name="action_settings">Settings</string>
 
-    <string name="main_activity_title">Cairo, Egypt</string>
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_attractions">Attractions</string>
+    <string name="nav_item_mosques">Mosques</string>
+    <string name="nav_item_parks">Parks</string>
+    <string name="nav_item_streets">Streets</string>
+
+    <string name="main_activity_title">Cairo</string>
 </resources>
