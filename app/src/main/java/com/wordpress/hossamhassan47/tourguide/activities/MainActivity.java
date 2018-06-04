@@ -1,8 +1,10 @@
-package com.wordpress.hossamhassan47.tourguide;
+package com.wordpress.hossamhassan47.tourguide.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +15,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.wordpress.hossamhassan47.tourguide.R;
+import com.wordpress.hossamhassan47.tourguide.fragments.AttractionsFragment;
+import com.wordpress.hossamhassan47.tourguide.fragments.HomeFragment;
+import com.wordpress.hossamhassan47.tourguide.fragments.MosquesFragment;
+import com.wordpress.hossamhassan47.tourguide.fragments.ParksFragment;
+import com.wordpress.hossamhassan47.tourguide.fragments.StreetsFragment;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +34,9 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setTitle(R.string.main_activity_title);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        setTitle(R.string.nav_item_home);
+        fragment = new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, fragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -76,21 +80,33 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_attractions) {
-            // Handle the camera action
+        if (id == R.id.nav_home) {
+            // Home
+            fragment = new HomeFragment();
+        } else if (id == R.id.nav_attractions) {
+            // Attractions
+            fragment = new AttractionsFragment();
         } else if (id == R.id.nav_mosques) {
-
+            // Mosques
+            fragment = new MosquesFragment();
         } else if (id == R.id.nav_parks) {
-
+            // Parks
+            fragment = new ParksFragment();
         } else if (id == R.id.nav_streets) {
-
+            // Streets
+            fragment = new StreetsFragment();
         }
+
+        setTitle(item.getTitle());
+
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
