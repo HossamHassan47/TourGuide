@@ -8,10 +8,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,32 +36,35 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/color_description_background"
                         android:paddingBottom="@dimen/txt_title_margin_vertical"
                         android:paddingLeft="@dimen/txt_title_margin_horizontal"
                         android:paddingRight="@dimen/txt_title_margin_horizontal"
                         android:paddingTop="@dimen/txt_title_margin_vertical"
-                        android:textSize="@dimen/txt_description_text_size"
-                        android:text="@string/home_fragment_details_1" />
+                        android:text="@string/home_fragment_details_1"
+                        android:textSize="@dimen/txt_description_text_size" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/color_description_background"
                         android:paddingBottom="@dimen/txt_title_margin_vertical"
                         android:paddingLeft="@dimen/txt_title_margin_horizontal"
                         android:paddingRight="@dimen/txt_title_margin_horizontal"
                         android:paddingTop="@dimen/txt_title_margin_vertical"
-                        android:textSize="@dimen/txt_description_text_size"
-                        android:text="@string/home_fragment_details_2" />
+                        android:text="@string/home_fragment_details_2"
+                        android:textSize="@dimen/txt_description_text_size" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/color_description_background"
                         android:paddingBottom="@dimen/txt_title_margin_vertical"
                         android:paddingLeft="@dimen/txt_title_margin_horizontal"
                         android:paddingRight="@dimen/txt_title_margin_horizontal"
                         android:paddingTop="@dimen/txt_title_margin_vertical"
-                        android:textSize="@dimen/txt_description_text_size"
-                        android:text="@string/home_fragment_details_3" />
+                        android:text="@string/home_fragment_details_3"
+                        android:textSize="@dimen/txt_description_text_size" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
         </LinearLayout>

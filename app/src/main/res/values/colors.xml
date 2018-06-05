@@ -3,6 +3,7 @@
     <color name="colorPrimary">#37474F</color>
     <color name="colorPrimaryDark">#263238</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="color_title_background">#455A64</color>
+    <color name="color_title_background">#546E7A</color>
     <color name="color_open_hours_background">#78909C</color>
+    <color name="color_description_background">#ECEFF1</color>
 </resources>
