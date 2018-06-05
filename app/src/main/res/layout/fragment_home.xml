@@ -1,65 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".fragments.HomeFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/thumbnail"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/thumbnail_height"
-            android:scaleType="fitXY"
-            android:src="@drawable/img_home_fragment_header" />
-
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_margin"
-            android:elevation="@dimen/card_elevation"
-            card_view:cardCornerRadius="@dimen/card_corner_radius">
-
-            <TextView
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/txt_details_margin"
-                android:text="@string/home_fragment_details_1" />
+                android:layout_margin="@dimen/card_margin"
+                android:elevation="@dimen/card_elevation"
+                card_view:cardCornerRadius="@dimen/card_corner_radius">
 
-        </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_margin"
-            android:elevation="3dp"
-            card_view:cardCornerRadius="4dp">
+                    <ImageView
+                        android:id="@+id/thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/thumbnail_height"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_home_fragment_header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/txt_details_margin"
-                android:text="@string/home_fragment_details_2" />
-        </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/txt_title_margin_vertical"
+                        android:paddingLeft="@dimen/txt_title_margin_horizontal"
+                        android:paddingRight="@dimen/txt_title_margin_horizontal"
+                        android:paddingTop="@dimen/txt_title_margin_vertical"
+                        android:textSize="@dimen/txt_description_text_size"
+                        android:text="@string/home_fragment_details_1" />
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_margin"
-            android:elevation="3dp"
-            card_view:cardCornerRadius="4dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/txt_title_margin_vertical"
+                        android:paddingLeft="@dimen/txt_title_margin_horizontal"
+                        android:paddingRight="@dimen/txt_title_margin_horizontal"
+                        android:paddingTop="@dimen/txt_title_margin_vertical"
+                        android:textSize="@dimen/txt_description_text_size"
+                        android:text="@string/home_fragment_details_2" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/txt_details_margin"
-                android:text="@string/home_fragment_details_3" />
-        </android.support.v7.widget.CardView>
-
-    </LinearLayout>
-</ScrollView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/txt_title_margin_vertical"
+                        android:paddingLeft="@dimen/txt_title_margin_horizontal"
+                        android:paddingRight="@dimen/txt_title_margin_horizontal"
+                        android:paddingTop="@dimen/txt_title_margin_vertical"
+                        android:textSize="@dimen/txt_description_text_size"
+                        android:text="@string/home_fragment_details_3" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

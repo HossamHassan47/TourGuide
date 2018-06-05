@@ -1,6 +1,8 @@
 package com.wordpress.hossamhassan47.tourguide.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,15 +20,17 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
     private List<Attraction> attractions;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView txtTitle, txtDescription;
-        public ImageView imgThumbnail;
+        public TextView txtTitle, txtDescription, txtOpenHours;
+        public ImageView imgThumbnail, imgDirection;
 
         public MyViewHolder(View view) {
             super(view);
 
             txtTitle = (TextView) view.findViewById(R.id.text_view_title);
             txtDescription = (TextView) view.findViewById(R.id.text_view_description);
+            txtOpenHours= (TextView) view.findViewById(R.id.text_view_open_hours);
             imgThumbnail = (ImageView) view.findViewById(R.id.image_view_thumbnail);
+            imgDirection = (ImageView) view.findViewById(R.id.image_view_direction);
         }
     }
 
@@ -49,7 +53,17 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.My
 
         holder.txtTitle.setText(attraction.getTitle());
         holder.txtDescription.setText(attraction.getDescription());
+        holder.txtOpenHours.setText(attraction.getOpenHours());
         holder.imgThumbnail.setImageResource(attraction.getImageResourceId());
+
+        holder.imgDirection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse(attraction.getDirection()));
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override

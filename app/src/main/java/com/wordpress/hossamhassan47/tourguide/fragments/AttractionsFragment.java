@@ -35,7 +35,7 @@ public class AttractionsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_mosques, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_attractions, container, false);
 
         // Get Mosques list
         fillAttractionsList();
@@ -57,10 +57,26 @@ public class AttractionsFragment extends Fragment {
 
     public void fillAttractionsList() {
         attractions = new ArrayList<>();
-        attractions.add(new Attraction("Attraction 1", "Description 1", R.drawable.nav_header_backgroud));
-        attractions.add(new Attraction("Attraction 2", "Description 2", R.drawable.nav_header_backgroud));
-        attractions.add(new Attraction("Attraction 3", "Description 3", R.drawable.nav_header_backgroud));
-        attractions.add(new Attraction("Attraction 4", "Description 4", R.drawable.nav_header_backgroud));
+        attractions.add(new Attraction("Attraction 1",
+                "Description 1",
+                R.drawable.nav_header_backgroud,
+                "",
+                ""));
+        attractions.add(new Attraction("Attraction 2",
+                "Description 2",
+                R.drawable.nav_header_backgroud,
+                "",
+                ""));
+        attractions.add(new Attraction("Attraction 3",
+                "Description 3",
+                R.drawable.nav_header_backgroud,
+                "",
+                ""));
+        attractions.add(new Attraction("Attraction 4",
+                "Description 4",
+                R.drawable.nav_header_backgroud,
+                "",
+                ""));
 
     }
 }
