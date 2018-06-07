@@ -16,6 +16,10 @@ import com.wordpress.hossamhassan47.tourguide.model.Attraction;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Fragment that used to display Top Attraction locations
+ *
+ */
 public class AttractionsFragment extends Fragment {
     private RecyclerView recyclerView;
     private AttractionAdapter adapter;

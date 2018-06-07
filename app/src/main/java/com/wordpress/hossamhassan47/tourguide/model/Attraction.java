@@ -1,5 +1,9 @@
 package com.wordpress.hossamhassan47.tourguide.model;
 
+/**
+ * Model Class to hold location data i.e Top Attractions, Mosques, Parks, Streets
+ *
+ */
 public class Attraction {
     private String title;
     private String description;

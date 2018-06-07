@@ -22,6 +22,11 @@ import com.wordpress.hossamhassan47.tourguide.fragments.MosquesFragment;
 import com.wordpress.hossamhassan47.tourguide.fragments.ParksFragment;
 import com.wordpress.hossamhassan47.tourguide.fragments.StreetsFragment;
 
+/**
+ * Main Activity that used as a container for different fragments
+ * i.e. Home, Attractions, Mosques, Parks, Streets fragments
+ *
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -34,10 +39,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setTitle(R.string.nav_item_home);
-        fragment = new HomeFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, fragment).commit();
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -46,6 +47,12 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        // Display home fragment by default
+        navigationView.getMenu().getItem(0).setChecked(true);
+        setTitle(R.string.nav_item_home);
+        fragment = new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.flContent, fragment).commit();
     }
 
     @Override

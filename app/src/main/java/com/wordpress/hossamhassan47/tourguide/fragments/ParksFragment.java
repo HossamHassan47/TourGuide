@@ -16,6 +16,10 @@ import com.wordpress.hossamhassan47.tourguide.model.Attraction;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Fragment that used to display National Parks and Gardens
+ *
+ */
 public class ParksFragment extends Fragment {
 
     private RecyclerView recyclerView;

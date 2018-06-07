@@ -16,6 +16,10 @@ import com.wordpress.hossamhassan47.tourguide.model.Attraction;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Fragment that used to display Coolest Streets
+ *
+ */
 public class StreetsFragment extends Fragment {
     private RecyclerView recyclerView;
     private AttractionAdapter adapter;

@@ -15,6 +15,11 @@ import com.wordpress.hossamhassan47.tourguide.model.Attraction;
 
 import java.util.List;
 
+/**
+ * Attraction Custom Adapter that used to list attraction location details
+ * i.e. Image, Title, Description, Open Hours, and Direction
+ *
+ */
 public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.MyViewHolder> {
     private Context mContext;
     private List<Attraction> attractions;

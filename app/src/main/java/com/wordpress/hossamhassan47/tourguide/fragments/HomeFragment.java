@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 
 import com.wordpress.hossamhassan47.tourguide.R;
 
+/**
+ * Fragment that used to display Welcome message
+ *
+ */
 public class HomeFragment extends Fragment {
 
     public HomeFragment() {
